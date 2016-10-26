@@ -15,13 +15,13 @@
               <ul class="sidebar-menu">
               <li class="header">SUPER ADMNISTRADOR</li>
                               <li>
-                  <a href="ususarios.php">
+                  <a href="usuarios.php">
                     <i class="fa fa-sitemap"></i> <span>Usuarios</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                             <li>
-                  <a href="ususarios.php">
+                  <a href="licencias.php">
                     <i class="fa fa-sitemap"></i> <span>Licencias</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
@@ -49,7 +49,7 @@
                 </li>
                 <li>
                   <a href="asesores.php">
-                    <i class="fa fa-credit-card"></i> <span>Créditos</span>
+                    <i class="fa fa-credit-card"></i> <span>Financieras</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
@@ -71,19 +71,19 @@
                 
                   <li>
                   <a href="asesores.php">
-                    <i class="fa fa-car"></i> <span>Vehículos</span>
+                    <i class="fa fa-car"></i> <span>Vehï¿½culos</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                  <li>
                   <a href="asesores.php">
-                    <i class="fa fa-calendar"></i> <span>Años</span>
+                    <i class="fa fa-calendar"></i> <span>Aï¿½os</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                 <li>
                   <a href="asesores.php">
-                    <i class="fa fa-tachometer"></i> <span>Kilómetros</span>
+                    <i class="fa fa-tachometer"></i> <span>Kilï¿½metros</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
@@ -93,29 +93,29 @@
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
-                <li class="header">Trámites Online</li>
+                <li class="header">Trï¿½mites Online</li>
                  <li>
                   <a href="asesores.php">
-                    <i class="fa fa-cubes"></i> <span>Tipos de trámites</span>
+                    <i class="fa fa-cubes"></i> <span>Tipos de trï¿½mites</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                 <li class="header">Costo de Servicios</li>
                  <li>
                   <a href="asesores.php">
-                    <i class="fa fa-car"></i> <span>Vehículos</span>
+                    <i class="fa fa-car"></i> <span>Vehï¿½culos</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                  <li>
                   <a href="asesores.php">
-                    <i class="fa fa-tachometer"></i> <span>Kilómetros</span>
+                    <i class="fa fa-tachometer"></i> <span>Kilï¿½metros</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
                  <li>
                   <a href="asesores.php">
-                    <i class="fa fa-calendar"></i> <span>Años</span>
+                    <i class="fa fa-calendar"></i> <span>Aï¿½os</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
@@ -128,7 +128,7 @@
                 </li>
               <li>
                   <a href="asesores.php">
-                    <i class="fa fa-cubes"></i> <span>Trámites online</span>
+                    <i class="fa fa-cubes"></i> <span>Trï¿½mites online</span>
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>

@@ -15,8 +15,16 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  
-  <!-- jQuery 2.1.4 -->
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+    <!-- SweetAlert  style -->
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css">
+
+    <!-- responsive datatables -->
+     <link rel="stylesheet" href="../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
+    <!-- jQuery 2.1.4 -->
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
@@ -36,17 +44,7 @@
     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script src="../../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
-    <script src="customer.js"></script>
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-    folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-
-    <!-- SweetAlert  style -->
-    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css">
-
-    <!-- responsive datatables -->
-     <link rel="stylesheet" href="../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
-
+    <script src="usuarios.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,13 +75,12 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
               <h1>
-                Agencias
+                Usuarios
                 <small>Mi Asesor Automotriz</small>
               </h1>
               <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Examples</a></li>
-                <li class="active">Blank page</li>
+                <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+             >
               </ol>
             </section>
 
@@ -101,10 +98,9 @@
                     <thead>
                       <tr class="tableheader">
                         <th style="width:40px">#</th>
-                        <th style="width:140px">Name</th>
-                        <th style="width:140px">Gender</th>
-                        <th style="width:140px">Country</th>
-                        <th style="width:140px">Phone</th>
+                        <th style="width:140px">Nombre</th>
+                        <th style="width:140px">Apellidos</th>
+                       
                         <th></th>
                       </tr>
                     </thead>
@@ -126,34 +122,20 @@
                       <div class="pad" id="infopanel"></div>
                       <div class="form-horizontal">
                         <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Name</label>
+                          <label class="col-sm-3  control-label">Nombre</label>
                           <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtname" placeholder="Name">
+                              <input type="text" class="form-control" id="txtnombre" placeholder="Nombre">
                               <input type="hidden" id="crudmethod" value="N"> 
                               <input type="hidden" id="txtid" value="0">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3  control-label">Gender</label>
+                     <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Apellidos</label>
                           <div class="col-sm-9">
-                              <select class="form-control" id="cbogender" >
-                                  <option value="Male"> Male </option>
-                                  <option value="Female"> Female </option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Country</label>
-                          <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtcountry">
+                              <input type="text" class="form-control" id="txtapellidos">
                             </div>
                         </div>
-                        <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Phone</label>
-                          <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtphone">
-                            </div>
-                        </div>
+                        
                         <div class="form-group"> 
                           <label class="col-sm-3  control-label"></label>
                           <div class="col-sm-9">

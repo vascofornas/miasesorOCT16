@@ -1,0 +1,12 @@
+[26-Oct-2016 01:07:36 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'user'@'localhost' (using password: YES)' in /home/miasesor/public_html/administrar/application/admin/login/includes/dbconn.php:18
+Stack trace:
+#0 /home/miasesor/public_html/administrar/application/admin/login/includes/dbconn.php(18): PDO->__construct('mysql:host=loca...', 'user', 'password')
+#1 /home/miasesor/public_html/administrar/application/admin/login/checklogin.php(17): DbConn->__construct()
+#2 {main}
+  thrown in /home/miasesor/public_html/administrar/application/admin/login/includes/dbconn.php on line 18
+[26-Oct-2016 01:14:20 America/Mexico_City] PHP Warning:  require(scripts/PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6
+[26-Oct-2016 01:14:20 America/Mexico_City] PHP Fatal error:  require(): Failed opening required 'scripts/PHPMailer/PHPMailerAutoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6
+[26-Oct-2016 01:37:19 America/Mexico_City] PHP Warning:  require(scripts/PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6
+[26-Oct-2016 01:37:19 America/Mexico_City] PHP Fatal error:  require(): Failed opening required 'scripts/PHPMailer/PHPMailerAutoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6
+[26-Oct-2016 11:48:34 America/Mexico_City] PHP Warning:  require(scripts/PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6
+[26-Oct-2016 11:48:34 America/Mexico_City] PHP Fatal error:  require(): Failed opening required 'scripts/PHPMailer/PHPMailerAutoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/miasesor/public_html/administrar/application/admin/login/includes/mailsender.php on line 6

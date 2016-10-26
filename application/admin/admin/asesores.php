@@ -1,10 +1,9 @@
-<?php require "login/loginheader.php"; ?>
-<!DOCTYPE html>
+<?php require "login/loginheader.php"; ?><!DOCTYPE html>
 <html>
 <head>
   <meta charset="ISO-8859-1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Agencias</title>
+  <title>Asesores</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -15,28 +14,6 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  
-  <!-- jQuery 2.1.4 -->
-    <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="../../plugins/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../../dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
-
-    <!-- SweetAlert -->
-    <script src="../../plugins/sweetalert/sweetalert.min.js"></script>
-    <!-- Bootstrap-notify -->
-    <script src="../../plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
-    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
-    <script src="../../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
-    <script src="customer.js"></script>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
@@ -60,7 +37,8 @@
         <div class="wrapper">
 
           <header class="main-header">
-           <?php include '../header.php';?>
+           <?php 
+           include '../header.php';?>
           </header>
 
           <!-- =============================================== -->
@@ -77,7 +55,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
               <h1>
-                Agencias
+                Asesores
                 <small>Mi Asesor Automotriz</small>
               </h1>
               <ol class="breadcrumb">
