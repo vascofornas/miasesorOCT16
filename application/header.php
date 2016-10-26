@@ -99,37 +99,26 @@
                   <!-- User Account: style can be found in dropdown.less -->
                   <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                      <span class="hidden-xs">Alexander Pierce</span>
+                      <img src="usuarios/<?php echo $_SESSION['foto']?>" class="user-image" alt="User Image">
+                      <span class="hidden-xs"><?php echo $_SESSION['nombre']?></span>
                     </a>
                     <ul class="dropdown-menu">
                       <!-- User image -->
                       <li class="user-header">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="usuarios/<?php echo $_SESSION['foto']?>" class="img-circle" alt="User Image">
                         <p>
-                          Alexander Pierce - Web Developer
-                          <small>Member since Nov. 2012</small>
+                          <?php echo $_SESSION['nombre']?> - <?php echo $_SESSION['cargo']?>
+                          <small>Miembro desde <?php echo $_SESSION['desde']?></small>
                         </p>
                       </li>
-                      <!-- Menu Body -->
-                      <li class="user-body">
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Followers</a>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Sales</a>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                          <a href="#">Friends</a>
-                        </div>
-                      </li>
+                     
                       <!-- Menu Footer-->
                       <li class="user-footer">
                         <div class="pull-left">
-                          <a href="#" class="btn btn-default btn-flat">Profile</a>
+                          <a href="#" class="btn btn-default btn-flat">Perfil</a>
                         </div>
                         <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                          <a href="login/logout.php" class="btn btn-default btn-flat">Cerrar Sesión</a>
                         </div>
                       </li>
                     </ul>

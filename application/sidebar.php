@@ -3,17 +3,32 @@
               <!-- Sidebar user panel -->
               <div class="user-panel">
                 <div class="pull-left image">
-                  <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="usuarios/<?php echo $_SESSION['foto']?>" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                  <p>Alexander Pierce</p>
+                  <p><?php echo $_SESSION['nombre']?></p>
                   <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
               </div>
               
               <!-- sidebar menu: : style can be found in sidebar.less -->
               <ul class="sidebar-menu">
+              <li class="header">SUPER ADMNISTRADOR</li>
+                              <li>
+                  <a href="ususarios.php">
+                    <i class="fa fa-sitemap"></i> <span>Usuarios</span>
+                    <small class="label pull-right bg-red">3</small>
+                  </a>
+                </li>
+                            <li>
+                  <a href="ususarios.php">
+                    <i class="fa fa-sitemap"></i> <span>Licencias</span>
+                    <small class="label pull-right bg-red">3</small>
+                  </a>
+                </li>
+                
               <li class="header">DATOS GENERALES</li>
+                
                 <li>
                   <a href="agencias.php">
                     <i class="fa fa-sitemap"></i> <span>Agencias</span>
