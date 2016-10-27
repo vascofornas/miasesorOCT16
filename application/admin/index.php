@@ -24,6 +24,27 @@
 
     <!-- responsive datatables -->
      <link rel="stylesheet" href="../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
+ <!-- jQuery 2.1.4 -->
+    <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="../../plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Bootstrap-notify -->
+    <script src="../../plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="../../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="usuarios.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,14 +75,17 @@
           <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
+           
+              <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
+            <h1>ZONA ADMINISTRACION / <?php 
+                    include 'funciones.php';echo get_agencia($_SESSION['agencia'])?></h1>
               <h1>
-                Zona de Administración
-                <small>Mi Asesor Automotriz</small>
+                
+                <small>Mi Asesor Automotriz  </small>
               </h1>
               <ol class="breadcrumb">
-                <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Examples</a></li>
-                <li class="active">Blank page</li>
+                <li><a href="index"><i class="fa fa-dashboard"></i> Portada</a></li>
+                
               </ol>
             </section>
 

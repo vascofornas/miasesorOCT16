@@ -27,7 +27,7 @@
                   </a>
                 </li>
                 
-              <li class="header">DATOS GENERALES</li>
+          
                 
                 <li>
                   <a href="agencias.php">
@@ -35,6 +35,7 @@
                     <small class="label pull-right bg-red">3</small>
                   </a>
                 </li>
+                    <li class="header">DATOS GENERALES</li>
                  <li>
                   <a href="asesores.php">
                     <i class="fa fa-group"></i> <span>Asesores</span>

@@ -1,8 +1,8 @@
 <?php
 include "../config.php";
-$query=mysql_query("SELECT @rownum := @rownum + 1 AS urutan,t.*
-	FROM members t, 
-	(SELECT @rownum := 0) r");
+$query=mysql_query("SELECT @rownum := @rownum + 1 AS urutan,t.*,r.*
+	FROM members t LEFT JOIN tb_agencias r ON t.agencia_usuario = r.id_agencia, 
+	(SELECT @rownum := 0) r") ;
 $data = array();
 while($r = mysql_fetch_assoc($query)) {
 	$data[] = $r;

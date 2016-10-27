@@ -27,7 +27,7 @@ function checkAttempts($username)
         $ip_address = $conf->ip_address;
         $err = '';
 
-        $sql = "SELECT Attempts as attempts, lastlogin FROM ".$tbl_attempts." WHERE IP = :ip and Username = :username";
+        $sql = "SELECT Attempts as attempts, lastlogin FROM ".$tbl_attempts." WHERE IP = :ip and Email = :username";
 
         $stmt = $db->conn->prepare($sql);
         $stmt->bindParam(':ip', $ip_address);

@@ -28,7 +28,7 @@ class LoginForm extends DbConn
 
         }
 
-        $stmt = $db->conn->prepare("SELECT * FROM ".$tbl_members." WHERE username = :myusername");
+        $stmt = $db->conn->prepare("SELECT * FROM ".$tbl_members." WHERE email = :myusername");
         $stmt->bindParam(':myusername', $myusername);
         $stmt->execute();
 
@@ -56,6 +56,7 @@ class LoginForm extends DbConn
                     $_SESSION['nivel'] = $result['nivel_usuario'];
                     $_SESSION['cargo'] = $result['cargo_usuario'];
                     $_SESSION['nivel'] = $result['nivel_usuario'];
+                    $_SESSION['agencia'] = $result['agencia_usuario'];
                     $_SESSION['desde'] = $result['mod_timestamp'];
                     
                     
@@ -89,7 +90,7 @@ class LoginForm extends DbConn
             $attcheck = checkAttempts($username);
             $curr_attempts = $attcheck['attempts'];
 
-            $stmt = $db->conn->prepare("INSERT INTO ".$tbl_attempts." (ip, attempts, lastlogin, username) values(:ip, 1, :lastlogin, :username)");
+            $stmt = $db->conn->prepare("INSERT INTO ".$tbl_attempts." (ip, attempts, lastlogin, email) values(:ip, 1, :lastlogin, :username)");
             $stmt->bindParam(':ip', $ip_address);
             $stmt->bindParam(':lastlogin', $datetimeNow);
             $stmt->bindParam(':username', $username);
@@ -137,7 +138,7 @@ class LoginForm extends DbConn
 
                 if ($timeDiff >= $login_timeout) {
 
-                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and username = :username";
+                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and email = :username";
                     $curr_attempts = 1;
 
                 }
@@ -146,12 +147,12 @@ class LoginForm extends DbConn
 
                 if ($timeDiff < $login_timeout) {
 
-                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and username = :username";
+                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and email = :username";
                     $curr_attempts++;
 
                 } elseif ($timeDiff >= $login_timeout) {
 
-                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and username = :username";
+                    $sql = "UPDATE ".$tbl_attempts." SET attempts = :attempts, lastlogin = :lastlogin where ip = :ip and email = :username";
                     $curr_attempts = 1;
 
                 }

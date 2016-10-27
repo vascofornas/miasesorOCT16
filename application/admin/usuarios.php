@@ -4,7 +4,7 @@
 <head>
   <meta charset="ISO-8859-1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Agencias</title>
+  <title>Usuarios</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -44,6 +44,7 @@
     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script src="../../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    
     <script src="usuarios.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -74,12 +75,15 @@
           <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
+            <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
+            <h1>USUARIOS / <?php 
+                    include 'funciones.php';echo get_agencia($_SESSION['agencia'])?></h1>
               <h1>
-                Usuarios
-                <small>Mi Asesor Automotriz</small>
+                
+                <small>Mi Asesor Automotriz  </small>
               </h1>
               <ol class="breadcrumb">
-                <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="index.php"><i class="fa fa-dashboard"></i> Portada</a></li>
              >
               </ol>
             </section>
@@ -90,7 +94,7 @@
               <!-- Default box -->
               <div class="box">
                 <div class="box-body">
-                 <button type="submit" class="btn btn-primary " id="btnadd" name="btnadd"><i class="fa fa-plus"></i> Add Customer</button>
+                 <button type="submit" class="btn btn-primary " id="btnadd" name="btnadd"><i class="fa fa-plus"></i> Nuevo Usuario</button>
                  <br>
                  <br>
                  <div class="box-body" style="max-width:900px;" >
@@ -98,8 +102,12 @@
                     <thead>
                       <tr class="tableheader">
                         <th style="width:40px">#</th>
-                        <th style="width:140px">Nombre</th>
-                        <th style="width:140px">Apellidos</th>
+                        <th style="width:100px">Nombre</th>
+                        <th style="width:100px">Apellidos</th>
+                        <th style="width:60px">Nivel</th>
+                        <th style="width:120px">Agencia</th>
+                        <th style="width:120px">Función</th>
+                        <th style="width:80px">Licencia</th>
                        
                         <th></th>
                       </tr>
@@ -115,7 +123,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">X</button>
-                      <h4 class="modal-title">Form Master Customer</h4>
+                      <h4 class="modal-title">Formulario Usuarios</h4>
                     </div>
                     <!--modal header-->
                     <div class="modal-body">
@@ -132,14 +140,62 @@
                      <div class="form-group"> 
                           <label class="col-sm-3  control-label">Apellidos</label>
                           <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtapellidos">
+                              <input type="text" class="form-control" id="txtapellidos" placeholder="Apellidos">
                             </div>
+                        </div>
+                        <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Email</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtemail" placeholder="Email">
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <label class="col-sm-3  control-label">Nivel de Usuario</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="txtnivel_usuario" >
+                              
+                                  <option value="1" selected="selected" selected=true> Asesor </option>
+                                  <option value="3"> Administrador de Agencia </option>
+                              <option value="5"> Super Administrador </option>
+                              
+                              </select>
+                          </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-sm-3  control-label">Agencia de Usuario</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="txtagencia_usuario" >
+                             
+                              
+                              <?php
+include "../config.php";
+$query=mysql_query("SELECT * FROM tb_agencias") ;
+$data = array();
+while($r = mysql_fetch_assoc($query)) {
+	$data[] = $r;
+}
+$i=0;
+foreach ($data as $key) {
+		// add new button
+	$data[$i]['button'] ;
+	echo '<option value="'.$data[$i]['id_agencia'].'">'.$data[$i]['nombre_agencia'].'</option>';
+	$i++;
+}
+$datax = array('data' => $data);
+echo json_encode($datax);
+?>
+                              
+                              
+                              
+                              </select>
+                          </div>
                         </div>
                         
                         <div class="form-group"> 
                           <label class="col-sm-3  control-label"></label>
                           <div class="col-sm-9">
-                            <button type="submit" class="btn btn-primary " id="btnsave"><i class="fa fa-save"></i> Save</button></div>
+                            <button type="submit" class="btn btn-primary " id="btnsave"><i class="fa fa-save"></i> Guardar</button></div>
                         </div>
                       </div>
                       <!--modal footer-->
