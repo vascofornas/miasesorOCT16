@@ -103,10 +103,10 @@ include 'funciones.php';?>
                     <thead>
                       <tr class="tableheader">
                         <th style="width:40px">#</th>
-                        <th style="width:100px">Código</th>
+                        <th style="width:140px">Codigo</th>
                         <th style="width:100px">Tipo</th>
-                        <th style="width:100px">Agencia</th>
-                        <th style="width:100px">Fecha de Alta</th>
+                        <th style="width:240px">Agencia</th>
+                        <th style="width:240px">Fecha de Alta</th>
                  
                         <th></th>
                       </tr>
@@ -129,9 +129,9 @@ include 'funciones.php';?>
                       <div class="pad" id="infopanel"></div>
                       <div class="form-horizontal">
                         <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Código</label>
+                          <label class="col-sm-3  control-label">Codigo</label>
                           <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtcod_licencia" placeholder="Código">
+                              <input type="text" class="form-control" id="txtcod_licencia" placeholder="Codigo">
                               <input type="hidden" id="crudmethod" value="N"> 
                               <input type="hidden" id="txtid_licencia" value="0">
                             </div>
