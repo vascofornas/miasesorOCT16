@@ -1,4 +1,5 @@
-<?php require "login/loginheader.php"; ?>
+<?php require "login/loginheader.php"; 
+include 'funciones.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +16,16 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  
-  <!-- jQuery 2.1.4 -->
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+    <!-- SweetAlert  style -->
+    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css">
+
+    <!-- responsive datatables -->
+     <link rel="stylesheet" href="../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
+    <!-- jQuery 2.1.4 -->
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
@@ -36,17 +45,8 @@
     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script src="../../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
-    <script src="customer.js"></script>
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-    folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-
-    <!-- SweetAlert  style -->
-    <link rel="stylesheet" href="../../plugins/sweetalert/sweetalert.css">
-
-    <!-- responsive datatables -->
-     <link rel="stylesheet" href="../../plugins/datatables/extensions/Responsive/css/dataTables.responsive.css">
-
+    
+    <script src="agencias.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,14 +76,16 @@
           <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
+            <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
+            <h1>AGENCIAS / <?php 
+                    echo get_agencia($_SESSION['agencia'])?></h1>
               <h1>
-                Agencias
-                <small>Mi Asesor Automotriz</small>
+                
+                <small>Mi Asesor Automotriz  </small>
               </h1>
               <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Examples</a></li>
-                <li class="active">Blank page</li>
+                <li><a href="index.php"><i class="fa fa-dashboard"></i> Portada</a></li>
+             >
               </ol>
             </section>
 
@@ -93,7 +95,7 @@
               <!-- Default box -->
               <div class="box">
                 <div class="box-body">
-                 <button type="submit" class="btn btn-primary " id="btnadd" name="btnadd"><i class="fa fa-plus"></i> Add Customer</button>
+                 <button type="submit" class="btn btn-primary " id="btnadd" name="btnadd"><i class="fa fa-plus"></i> Nueva Agencia</button>
                  <br>
                  <br>
                  <div class="box-body" style="max-width:900px;" >
@@ -101,10 +103,10 @@
                     <thead>
                       <tr class="tableheader">
                         <th style="width:40px">#</th>
-                        <th style="width:140px">Name</th>
-                        <th style="width:140px">Gender</th>
-                        <th style="width:140px">Country</th>
-                        <th style="width:140px">Phone</th>
+                        <th style="width:140px">Codigo</th>
+                        <th style="width:400px">Nombre</th>
+                        
+                 
                         <th></th>
                       </tr>
                     </thead>
@@ -119,45 +121,31 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">X</button>
-                      <h4 class="modal-title">Form Master Customer</h4>
+                      <h4 class="modal-title">Formulario Agencias</h4>
                     </div>
                     <!--modal header-->
                     <div class="modal-body">
                       <div class="pad" id="infopanel"></div>
                       <div class="form-horizontal">
                         <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Name</label>
+                          <label class="col-sm-3  control-label">Codigo</label>
                           <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtname" placeholder="Name">
+                              <input type="text" class="form-control" id="txtcodigo_agencia" placeholder="Codigo">
                               <input type="hidden" id="crudmethod" value="N"> 
-                              <input type="hidden" id="txtid" value="0">
+                              <input type="hidden" id="txtid_agencia" value="0">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3  control-label">Gender</label>
+                     <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Codigo</label>
                           <div class="col-sm-9">
-                              <select class="form-control" id="cbogender" >
-                                  <option value="Male"> Male </option>
-                                  <option value="Female"> Female </option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Country</label>
-                          <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtcountry">
+                              <input type="text" class="form-control" id="txtnombre_agencia" placeholder="Nombre">
+                             
                             </div>
                         </div>
-                        <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Phone</label>
-                          <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtphone">
-                            </div>
-                        </div>
-                        <div class="form-group"> 
+                                               <div class="form-group"> 
                           <label class="col-sm-3  control-label"></label>
                           <div class="col-sm-9">
-                            <button type="submit" class="btn btn-primary " id="btnsave"><i class="fa fa-save"></i> Save</button></div>
+                            <button type="submit" class="btn btn-primary " id="btnsave"><i class="fa fa-save"></i> Guardar</button></div>
                         </div>
                       </div>
                       <!--modal footer-->
