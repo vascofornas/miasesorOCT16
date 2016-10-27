@@ -15,5 +15,12 @@ foreach ($data as $key) {
 }
 return $nombre_agencia;
 }
+function contar_usuarios(){
+	$result = mysql_query("SELECT count(*) FROM members");
+	$row = mysql_fetch_row($result);
+	$num = $row[0];
+	return $num;
+}
 ?>
+  
                         
