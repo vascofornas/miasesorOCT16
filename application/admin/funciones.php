@@ -21,6 +21,18 @@ function contar_usuarios(){
 	$num = $row[0];
 	return $num;
 }
+function contar_licencias(){
+	$result = mysql_query("SELECT count(*) FROM tb_licencias");
+	$row = mysql_fetch_row($result);
+	$num = $row[0];
+	return $num;
+}
+function contar_agencias(){
+	$result = mysql_query("SELECT count(*) FROM tb_agencias");
+	$row = mysql_fetch_row($result);
+	$num = $row[0];
+	return $num;
+}
 ?>
   
                         

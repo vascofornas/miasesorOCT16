@@ -23,7 +23,7 @@
                             <li>
                   <a href="licencias.php">
                     <i class="fa fa-sitemap"></i> <span>Licencias</span>
-                    <small class="label pull-right bg-red">3</small>
+                    <small class="label pull-right bg-red"><?php echo contar_licencias();?></small>
                   </a>
                 </li>
                 
@@ -32,7 +32,7 @@
                 <li>
                   <a href="agencias.php">
                     <i class="fa fa-sitemap"></i> <span>Agencias</span>
-                    <small class="label pull-right bg-red">3</small>
+                    <small class="label pull-right bg-red"><?php echo contar_agencias();?></small>
                   </a>
                 </li>
                     <li class="header">DATOS GENERALES</li>
