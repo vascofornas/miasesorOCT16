@@ -24,6 +24,7 @@ $(document).ready( function ()
         { "data": "nombre_agencia" },
         { "data": "cargo_usuario" },
         { "data": "licencia_usuario" },
+        { "data": "tel" },
         { "data": "button" },
         ]
       });
@@ -43,7 +44,10 @@ $(document).ready( function ()
         $("#txtnivel_usuario").val("");
         $("#txtagencia_usuario").val("");
         $("#txtemail").val("");
-       
+        $("#txtcargo_usuario").val("");
+        $("#txtlicencia_usuario").val("");
+        $("#txtverified").val("");
+        $("#txttel").val("");
         $("#crudmethod").val("N");
         $("#txtid").val("0");
     });
@@ -92,8 +96,11 @@ $(document).ready( function ()
       var apellidos = $("#txtapellidos").val();
       var nivel_usuario = $("#txtnivel_usuario").val();
       var agencia_usuario = $("#txtagencia_usuario").val();
+      var cargo_usuario = $("#txtcargo_usuario").val();
       var email = $("#txtemail").val();
-      
+      var tel = $("#txttel").val();
+      var verified = $("#txtverified").val();
+      var licencia_usuario = $("#txtlicencia_usuario").val();
       var crud=$("#crudmethod").val();
       if(nombre == '' || nombre == null ){
         swal("AVISO","Campo Nombre es obligatorio","warning");
@@ -120,6 +127,16 @@ $(document).ready( function ()
           $("#txtemail").focus();
           return;
         }
+      if(cargo_usuario == '' || cargo_usuario == null ){
+          swal("AVISO","Campo Funcion del Usuario es obligatorio","warning");
+          $("#txtemail").focus();
+          return;
+        }
+      if(verified == '' || verified == null ){
+          swal("AVISO","Campo Email Verificado es obligatorio","warning");
+          $("#txtemail").focus();
+          return;
+        }
       var value = {
         id: id,
         nombre: nombre,
@@ -127,6 +144,10 @@ $(document).ready( function ()
         nivel_usuario:nivel_usuario,
         agencia_usuario:agencia_usuario,
         email:email,
+        tel:tel,
+        cargo_usuario:cargo_usuario,
+        licencia_usuario:licencia_usuario,
+        verified:verified,
         
         crud:crud
       };
@@ -149,6 +170,10 @@ $(document).ready( function ()
               $("#txtnivel_usuario").val("");
               $("#txtagencia_usuario").val("");
               $("#txtemail").val("");
+              $("#txtcargo_usuario").val("");
+              $("#txtlicencia_usuario").val("");
+              $("#txtverified").val("");
+              $("#txttel").val("");
               
               $("#crudmethod").val("N");
               $("#txtid").val("0");
@@ -195,8 +220,11 @@ $(document).ready( function ()
           $("#txtnivel_usuario").val(data.nivel_usuario);
 
           $("#txtagencia_usuario").val(data.agencia_usuario);
-
+          $("#txtcargo_usuario").val(data.cargo_usuario);
+          $("#txtlicencia_usuario").val(data.licencia_usuario);
           $("#txtemail").val(data.email);
+          $("#txttel").val(data.tel);
+          $("#txtverified").val(data.verified);
 
           $("#modalcust").modal('show');
           $("#txtnombre").focus();

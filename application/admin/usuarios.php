@@ -106,9 +106,10 @@
                         <th style="width:100px">Apellidos</th>
                         <th style="width:60px">Nivel</th>
                         <th style="width:120px">Agencia</th>
-                        <th style="width:120px">Función</th>
+                        <th style="width:100px">Función</th>
+                        
                         <th style="width:80px">Licencia</th>
-                       
+                       <th style="width:100px">Tel</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -146,10 +147,26 @@
                         <div class="form-group"> 
                           <label class="col-sm-3  control-label">Email</label>
                           <div class="col-sm-9">
-                              <input type="text" class="form-control" id="txtemail" placeholder="Email">
+                              <input type="email" class="form-control" id="txtemail" placeholder="Email">
                             </div>
                         </div>
-                        
+                        <div class="form-group">
+                            <label class="col-sm-3  control-label">Email Verificado</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="txtverified" >
+                              
+                                  <option value="1" selected="selected" selected=true> Si </option>
+                                  <option value="0"> No </option>
+                             
+                              </select>
+                          </div>
+                        </div>
+                        <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Teléfono</label>
+                          <div class="col-sm-9">
+                              <input type="email" class="form-control" id="txttel" placeholder="Teléfono">
+                            </div>
+                        </div>
                          <div class="form-group">
                             <label class="col-sm-3  control-label">Nivel de Usuario</label>
                           <div class="col-sm-9">
@@ -158,6 +175,18 @@
                                   <option value="1" selected="selected" selected=true> Asesor </option>
                                   <option value="3"> Administrador de Agencia </option>
                               <option value="5"> Super Administrador </option>
+                              
+                              </select>
+                          </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-sm-3  control-label">Función de Usuario</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="txtcargo_usuario" >
+                              
+                                  <option value="Asesor de Ventas" selected="selected" selected=true> Asesor </option>
+                                  <option value="Administrador de Agencia"> Administrador de Agencia </option>
+                              <option value="Super Administrador"> Super Administrador </option>
                               
                               </select>
                           </div>
@@ -180,6 +209,35 @@ foreach ($data as $key) {
 		// add new button
 	$data[$i]['button'] ;
 	echo '<option value="'.$data[$i]['id_agencia'].'">'.$data[$i]['nombre_agencia'].'</option>';
+	$i++;
+}
+$datax = array('data' => $data);
+echo json_encode($datax);
+?>
+                              
+                              
+                              
+                              </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3  control-label">Licencia de Usuario</label>
+                          <div class="col-sm-9">
+                              <select class="form-control" id="txtlicencia_usuario" >
+                             
+                              
+                              <?php
+include "../config.php";
+$query=mysql_query("SELECT * FROM tb_licencias") ;
+$data = array();
+while($r = mysql_fetch_assoc($query)) {
+	$data[] = $r;
+}
+$i=0;
+foreach ($data as $key) {
+		// add new button
+	$data[$i]['button'] ;
+	echo '<option value="'.$data[$i]['id_licencia'].'">'.$data[$i]['cod_licencia'].'</option>';
 	$i++;
 }
 $datax = array('data' => $data);
