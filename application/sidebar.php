@@ -17,7 +17,7 @@
                               <li>
                   <a href="usuarios.php">
                     <i class="fa fa-sitemap"></i> <span>Usuarios</span>
-                    <small class="label pull-right bg-red">3</small>
+                    <small class="label pull-right bg-red"><?php echo contar_usuarios();?></small>
                   </a>
                 </li>
                             <li>

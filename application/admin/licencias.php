@@ -1,4 +1,5 @@
-<?php require "login/loginheader.php"; ?>
+<?php require "login/loginheader.php"; 
+include 'funciones.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,7 +78,7 @@
             <section class="content-header">
             <IMG SRC="login/logoappauto.png" WIDTH=80 HEIGHT=80 align="center">
             <h1>LICENCIAS / <?php 
-                    include 'funciones.php';echo get_agencia($_SESSION['agencia'])?></h1>
+                    echo get_agencia($_SESSION['agencia'])?></h1>
               <h1>
                 
                 <small>Mi Asesor Automotriz  </small>
