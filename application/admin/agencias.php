@@ -136,14 +136,100 @@ include 'funciones.php';?>
                             </div>
                         </div>
                      <div class="form-group"> 
-                          <label class="col-sm-3  control-label">Codigo</label>
+                          <label class="col-sm-3  control-label">Nombre</label>
                           <div class="col-sm-9">
                               <input type="text" class="form-control" id="txtnombre_agencia" placeholder="Nombre">
                              
                             </div>
                         </div>
+                        <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Direccion</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                        
+                           <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Google Play</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                           <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Apple App Store</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                           <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Web Autos Nuevos</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                           <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Auxilio Vial MEXICO</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                           <div class="form-group"> 
+                          <label class="col-sm-3  control-label">Auxilio Vial USA</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">INBURSA</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">GNP</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">ASSISTANCE</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">MAPFRE</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">QUALITAS</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
+                         <div class="form-group"> 
+                          <label class="col-sm-3  control-label">ATLAS</label>
+                          <div class="col-sm-9">
+                              <input type="text" class="form-control" id="txtdireccion_agencia" placeholder="Nombre">
+                             
+                            </div>
+                        </div>
                                                <div class="form-group"> 
                           <label class="col-sm-3  control-label"></label>
+                          
                           <div class="col-sm-9">
                             <button type="submit" class="btn btn-primary " id="btnsave"><i class="fa fa-save"></i> Guardar</button></div>
                         </div>
